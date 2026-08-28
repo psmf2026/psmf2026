@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PŠMF 2026 | Podzimní škola matematiky a fyziky</title>
     
-    <!-- Kompletní vzhled je napsaný přímo zde, takže se načte i bez internetu -->
     <style>
-        /* Základní nastavení stránky */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #FAF7F2;
@@ -21,54 +19,127 @@
             align-items: center;
         }
 
-        /* Hlavní kontejner uprostřed */
-        main {
-            max-width: 500px;
+        /* Dřevěný design hlavičky */
+        header {
             width: 100%;
+            background-color: #4A3525;
+            /* SVG textura dřevěných prken na pozadí */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M0 0h40v40H0V0zm20 0h20v40H20V0zM0 20h40v20H0V20z' fill='%233D2B1D' fill-opacity='0.15'/%3E%3Cpath d='M0 10h40M0 20h40M0 30h40' stroke='%232B1E14' stroke-width='1' opacity='0.3'/%3E%3C/svg%3E");
             padding: 40px 20px;
             text-align: center;
             box-sizing: border-box;
-            margin: auto 0;
+            border-bottom: 6px solid #D4A373;
         }
 
-        /* Stylování štítku */
+        header h1 {
+            color: #FAF7F2;
+            font-family: Georgia, serif;
+            font-size: 46px;
+            margin: 0 0 5px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header .subtitle {
+            color: #D4A373;
+            font-size: 18px;
+            font-style: italic;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        /* Navigační menu */
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: #FAF7F2;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 5px 15px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,0.1);
+            transition: background 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #D4A373;
+            color: #3E332E;
+        }
+
+        main {
+            max-width: 580px;
+            width: 100%;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
         .badge {
-            display: inline-block;
+            display: block;
+            width: flex;
+            max-width: 150px;
+            margin: 0 auto 20px auto;
             background-color: #D4A373;
             color: #3E332E;
             font-weight: bold;
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            padding: 6px 16px;
+            padding: 6px 12px;
             border-radius: 50px;
-            margin-bottom: 20px;
+            text-align: center;
         }
 
-        /* Nadpisy */
-        h1 {
-            font-size: 42px;
-            color: #2D4A3E;
-            margin: 0 0 5px 0;
-            font-family: Georgia, serif;
-        }
-
-        .subtitle {
-            font-size: 18px;
-            color: #8A7A6E;
-            font-style: italic;
-            margin: 0 0 25px 0;
-        }
-
-        /* Popisný text */
         .description {
-            font-size: 15px;
-            line-height: 1.6;
+            font-size: 16px;
+            line-height: 1.7;
             color: #5C4D44;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            text-align: justify;
         }
 
-        /* Tabulka s rychlými fakty */
+        /* Sekce aktivit (Vesnický styl s domečkem) */
+        .village-life {
+            background-color: white;
+            border: 2px solid #E6DFD5;
+            border-top: 5px solid #2D4A3E;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .village-life h3 {
+            margin-top: 0;
+            color: #2D4A3E;
+            font-family: Georgia, serif;
+            font-size: 22px;
+            border-bottom: 1px solid #E6DFD5;
+            padding-bottom: 10px;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #5C4D44;
+        }
+
+        .activity-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
         .info-box {
             background-color: white;
             border: 1px solid #E6DFD5;
@@ -77,6 +148,7 @@
             padding: 15px;
             margin-bottom: 35px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            text-align: center;
         }
 
         .info-item {
@@ -100,69 +172,105 @@
             font-size: 15px;
         }
 
-        /* Tlačítko na přihlášku */
+        .btn-container {
+            text-align: center;
+        }
+
         .btn {
             display: inline-block;
             background-color: #2D4A3E;
             color: #FAF7F2;
             text-decoration: none;
             font-weight: bold;
-            font-size: 16px;
-            padding: 15px 32px;
+            font-size: 17px;
+            padding: 16px 36px;
             border-radius: 12px;
             transition: background-color 0.2s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .btn:hover {
             background-color: #1E332A;
         }
 
-        /* Patička */
         footer {
             padding: 20px 0;
             font-size: 12px;
             color: #8A7A6E;
             text-align: center;
             width: 100%;
+            background-color: #FAF7F2;
         }
     </style>
 </head>
 <body>
 
-    <main>
-        <!-- Malý štítek -->
-        <span class="badge">Neoficiální akce</span>
-
-        <!-- Hlavní nadpis -->
+    <header>
         <h1>PŠMF 2026</h1>
         <p class="subtitle">Podzimní škola matematiky a fyziky</p>
+        <nav>
+            <a href="organizatori.html">🏡 O organizátorech</a>
+        </nav>
+    </header>
 
-        <!-- Krátké info -->
+    <main>
+        <span class="badge">Neoficiální akce</span>
+
         <p class="description">
-             Letošní podzimní setkání nás zavede do malebné a klidné oblasti v krásném okolí Krkonošského
-             národního parku. Bydlení máme zařízené na strmém svahu, obklopeni hustými lesy,
-             čistým horským vzduchem a parádními výhledy do podzimního údolí. Čekají nás přednášky u vyhřátých kamen,
-             společný čas na horách a klid mimo civilizaci. Konkrétní místo pošleme přímo do schránky až
-             přihlášeným sousedům.       
+            Letošní podzimní setkání nás zavede do klidné oblasti na rozhraní Krkonošského národního parku. Naše ubytování je obklopené lesy, kopci a čistým horským vzduchem. Čeká nás skvělá parta lidí, zasloužený odpočinek od školní rutiny a hromada zážitků. Konkrétní místo pošleme přímo do schránky až přihlášeným sousedům.
         </p>
 
-        <!-- Rychlá fakta -->
-        <div class="info-box">
-            <div class="info-item">
-                <span class="info-label">Kdy</span>
-                <span class="info-value">28.10. - 1.11. 2026</span>
-            </div>
-            <div class="info-item">
-                <span class="info-label">Kde</span>
-                <span class="info-value">Poblíž Krkonošského NP</span>
+        <!-- Nová sekce s popisem vesnických aktivit -->
+        <div class="village-life">
+            <h3>🌲 Co se chystá v našem revíru?</h3>
+            <div class="activity-grid">
+                <div class="activity-item">
+                    <span class="activity-icon">🎓</span>
+                    <div><strong>Odborný program:</strong> Chystáme pár zajímavých přednášek pro účastníky podávaných lidskou formou.</div>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-icon">🥏</span>
+                    <div><strong>Frisbee na palouku:</strong> Kdo bude chtít, pořádně provětrá talíř na horském vzduchu.</div>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-icon">🎲</span>
+                    <div><strong>Hraní deskovek:</strong> Večery u stolu s hromadou společenských her.</div>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-icon">🎸</span>
+                    <div><strong>Kytáření u kamen:</strong> Akustické večery s kytarou, zpěvem a čajem, když venku začne přituhovat.</div>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-icon">🏃‍♂️</span>
+                    <div><strong>Zábsvké hry:</strong> Tým organizátorů už v tajnosti připravuje venkovní i vnitřní hry.</div>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-icon">🥾</span>
+                    <div><strong>Horský výlet:</strong> Vyrazíme společně prozkoumat krásy KRNAPu a vyčistit si hlavy v lesích.</div>
+                </div>
+                <div class="activity-item">
+                    <span class="activity-icon">🤫</span>
+                    <div><strong>Překvápko:</strong> Možná se chystá i něco víc.</div>
+                </div>
             </div>
         </div>
 
-        <!-- Tlačítko -->
-        <a href="https://google.com" target="_blank" class="btn">
-            Chci se přihlásit
-        </a>
+        <div class="info-box">
+            <div class="info-item">
+                <span class="info-label">Kdy</span>
+                <span class="info-value">Podzim 2026</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Kde</span>
+                <span class="info-value">Horská chata, KRNAP</span>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <a href="https://google.com" target="_blank" class="btn">
+                Chci se přihlásit
+            </a>
+        </div>
     </main>
 
     <footer>
