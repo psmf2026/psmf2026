@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PŠMF 2026 | Podzimní škola matematiky a fyziky</title>
+    
+    <!-- Kompletní vzhled je napsaný přímo zde, takže se načte i bez internetu -->
+    <style>
+        /* Základní nastavení stránky */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #FAF7F2;
+            color: #3E332E;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Hlavní kontejner uprostřed */
+        main {
+            max-width: 500px;
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+            box-sizing: border-box;
+            margin: auto 0;
+        }
+
+        /* Stylování štítku */
+        .badge {
+            display: inline-block;
+            background-color: #D4A373;
+            color: #3E332E;
+            font-weight: bold;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+
+        /* Nadpisy */
+        h1 {
+            font-size: 42px;
+            color: #2D4A3E;
+            margin: 0 0 5px 0;
+            font-family: Georgia, serif;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #8A7A6E;
+            font-style: italic;
+            margin: 0 0 25px 0;
+        }
+
+        /* Popisný text */
+        .description {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #5C4D44;
+            margin-bottom: 30px;
+        }
+
+        /* Tabulka s rychlými fakty */
+        .info-box {
+            background-color: white;
+            border: 1px solid #E6DFD5;
+            border-radius: 12px;
+            display: flex;
+            padding: 15px;
+            margin-bottom: 35px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .info-item {
+            flex: 1;
+        }
+
+        .info-item:first-child {
+            border-right: 1px solid #E6DFD5;
+        }
+
+        .info-label {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #A09084;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        /* Tlačítko na přihlášku */
+        .btn {
+            display: inline-block;
+            background-color: #2D4A3E;
+            color: #FAF7F2;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 15px 32px;
+            border-radius: 12px;
+            transition: background-color 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .btn:hover {
+            background-color: #1E332A;
+        }
+
+        /* Patička */
+        footer {
+            padding: 20px 0;
+            font-size: 12px;
+            color: #8A7A6E;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <!-- Malý štítek -->
+        <span class="badge">Neoficiální akce</span>
+
+        <!-- Hlavní nadpis -->
+        <h1>PŠMF 2026</h1>
+        <p class="subtitle">Podzimní škola matematiky a fyziky</p>
+
+        <!-- Krátké info -->
+        <p class="description">
+             Letošní podzimní setkání nás zavede do malebné a klidné oblasti v krásném okolí Krkonošského
+             národního parku. Bydlení máme zařízené na strmém svahu, obklopeni hustými lesy,
+             čistým horským vzduchem a parádními výhledy do podzimního údolí. Čekají nás přednášky u vyhřátých kamen,
+             společný čas na horách a klid mimo civilizaci. Konkrétní místo pošleme přímo do schránky až
+             přihlášeným sousedům.       
+        </p>
+
+        <!-- Rychlá fakta -->
+        <div class="info-box">
+            <div class="info-item">
+                <span class="info-label">Kdy</span>
+                <span class="info-value">28.10. - 1.11. 2026</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Kde</span>
+                <span class="info-value">Poblíž Krkonošského NP</span>
+            </div>
+        </div>
+
+        <!-- Tlačítko -->
+        <a href="https://google.com" target="_blank" class="btn">
+            Chci se přihlásit
+        </a>
+    </main>
+
+    <footer>
+        © 2026 Organizační výbor PŠMF.
+    </footer>
+
+</body>
+</html>
