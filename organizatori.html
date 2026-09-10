@@ -57,7 +57,7 @@
         }
 
         main {
-            max-width: 580px;
+            max-width: 700px;
             width: 100%;
             padding: 40px 20px;
             box-sizing: border-box;
@@ -111,7 +111,7 @@
 <body>
 
     <header>
-        <h1>Naši hospodáři</h1>
+        <h1>Naše zastupitelstvo</h1>
         <nav>
             <a href="index.html">⬅ Zpět na náves</a>
         </nav>
@@ -122,10 +122,11 @@
             
             <!-- Medailonek: Ty -->
             <div class="card">
-                <div class="avatar">Foto</div>
+                <img src="ja.jpeg" alt="Moje fotka" style="width: 120px; height: 160px; border-radius: 8%; object-fit: cover; border: 2px solid #E6DFD5; flex-shrink: 0;">
                 <div class="card-content">
-                    <h3>Jméno</h3>
-                    <p>Text</p>
+                    <h3>Tomík - Starosta</h3>
+                    <p>Ahoj, já jsem Tom a je mi 19 let. Studuji prvním rokem informatiku na Matfyzu a jsem z toho nadšený, každý nový den nabíjení vědomostí mě dělá neuvěřitelně šťastným. Mezi mé koníčky patří především hra na housle (mločímu publiku) či lezení (ostatním lidem na nervy). Rád se také věnuji programování, takže kdybyste potřebovali pomoc s praním triček podle barev, neváhejte se na mne obrátit. Poslední zajímavostí o mně je, že nejsem ani noční sova, ani ranní ptáče, nýbrž netopýr, který naspí klidně i 12 hodin denně.
+</p>
                 </div>
             </div>
 
@@ -133,17 +134,44 @@
             <div class="card">
                 <div class="avatar">Foto</div>
                 <div class="card-content">
-                    <h3>Jméno</h3>
+                    <h3>Majda - Místostarostka</h3>
                     <p>Text</p>
                 </div>
             </div>
 
+            <div class="card">
+                <img src="jindra.jpeg" alt="Moje fotka" style="width: 120px; height: 160px; border-radius: 8%; object-fit: cover; border: 2px solid #E6DFD5; flex-shrink: 0;">
+                <div class="card-content">
+                    <h3>Jindra - Kuchtík</h3>
+                    <p>Čauky, já jsem Jindra ale kamarádi mi většinou říkají Henry, vzhledem k mojí podobě s Anglickým králem Jindřichem VIII. Spoustu let jsem strávil ve sboru se sirénami, kde jsme každé volné odpoledne vábili námořníky projíždějící kolem. Poté jsem ale zestárnul, a tak jsem se raději vydal na studium obecné matematiky. Minulý rok jsem prodělal nehezkou zlomeninu ruky. Pokud se mě na ní zeptáte, řeknu vám pravděpodobně nějakou trapnou historku se spolužákem, ve skutečnosti se mi to ale přihodilo při pádu do jámy, kterou jsem jinému kopal.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="viki.jpeg" alt="Moje fotka" style="width: 120px; height: 160px; border-radius: 8%; object-fit: cover; border: 2px solid #E6DFD5; flex-shrink: 0;">
+                <div class="card-content">
+                    <h3>Viktor - Peněžník/kuchtík 2</h3>
+                    <p>Zdravím, mé jméno je Viktor. Moc rád si hraju s modelínou (hlavně s modrou, ta je moje oblíbená), k mému zklamání je ovšem obor matematické modelování o něčem docela jiném, ale i tak mě to docela baví. Rád hraju squash? Nebo je to padel? Nevim, prostě rád odpaluju raketou by se dalo říct asi. Kdybych si mohl na opuštěný ostrov vzít pouze 4 věci, byly by to: tužka, kružítko, papír a pravítko, to abych mohl celý ostrov znázornit v Mongeově promítání.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="avatar">Foto</div>
+                <div class="card-content">
+                    <h3>Matěj</h3>
+                    <p>Nazdárek, já jsem Matěj a je mi pouhých 18 let. Teprve včera se mi podařilo zbavit dudlíku. Často chodím běhat, protože se bojím zombie apokalypsy a není pro mě nic děsivějšího, než skončit se zombie kousancem, protože jako jedinej z party neudržím tempo 4:30 na kilák. Někdy si přijdu ve svém životě až moc šťastný, tak si jednou za čas zajdu na spartu na fotbal a hned se moje hladina radosti sníží. Taky se hodně nerad koukám na lidi, a tak se ve svém volném čase věnuji práci v Českém rozhlasu a tajně doufám v jeho comeback.</p>
+                </div>
+            </div>
+            
+
         </div>
     </main>
-
-    <footer>
-        © 2026 Organizační výbor PŠMF.
-    </footer>
+    <footer style="padding: 20px 0; font-size: 12px; color: #8A7A6E; text-align: center; width: 100%; background-color: #FAF7F2; position: relative;">
+    <span>© 2026 Organizační výbor PŠMF.</span>
+    
+    <!-- Obrázek je teď uvnitř patičky, napozicovaný absolutně vpravo -->
+    <img src="cimrman.webp" alt="Stopa mistra" style="position: absolute; right: 15px; bottom: 12px; width: 32px; height: auto; opacity: 0.15; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='0.15'">
+</footer>
 
 </body>
 </html>
